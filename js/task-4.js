@@ -9,6 +9,6 @@ const min =
 const result =
   time < 1440 && typeof time === "number"
     ? `${hours}:${min}`
-    : "Sorry,  you entered invalid data";
+    : "Sorry, you entered invalid data";
 
 console.log("result: ", result);
