@@ -26,9 +26,9 @@ class Client {
 
 const client = new Client("myLogin", "coolEmail@gmail.com");
 console.log("client: ", client);
-console.log("logn:", client.login);
-console.log("logn:", client.email);
+console.log("login:", client.login);
+console.log("email:", client.email);
 client.login = "myNewLogin_338";
 client.email = "newCoolEmail@gmail.com";
-console.log("logn:", client.login);
-console.log("logn:", client.email);
+console.log("login:", client.login);
+console.log("email:", client.email);
