@@ -3,6 +3,7 @@ const products = [
   { name: "Bread", price: 10 },
   { name: "Eggs", price: 15 },
 ];
+console.table(products);
 
 const result = products
   .filter((product) => product.price > 10)
