@@ -112,3 +112,9 @@ span {
   border: 2px dashed #ffae00;
   margin: 10px;
 }
+
+/* js */
+
+.active {
+  color: #c58e1b;
+}
