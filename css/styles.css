@@ -115,6 +115,39 @@ span {
 
 /* js */
 
+/* task-1 */
 .active {
   color: #c58e1b;
+}
+
+/* task-2 */
+.number-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 4px;
+}
+
+.number-container .number {
+  color: #1d1c20;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 250ms ease-in-out;
+}
+
+.number-container .number:hover {
+  transform: scale(1.1);
+}
+
+.number.even {
+  background-color: #548c95;
+}
+
+.number.odd {
+  background-color: #8d6c8f;
 }
