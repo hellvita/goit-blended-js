@@ -33,7 +33,7 @@ ul {
   font-style: italic;
   font-weight: 500;
   text-decoration: underline;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .container {
@@ -90,14 +90,16 @@ ul {
   background-color: #cddbe5;
 }
 
-.contact-form-btn {
+.contact-form-btn,
+#decrease,
+#increase {
   border-radius: 4px;
   padding: 12px 16px;
   min-width: 160px;
   margin: 20px auto 0 auto;
   border: none;
   background-color: #cddbe5;
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 .contact-form-btn:hover {
@@ -120,8 +122,22 @@ span {
 .box {
   width: 50px;
   height: 50px;
-  border: 2px dashed #ffae00;
-  margin: 10px;
+  border: 2px dashed #57b0bf;
+  margin: 20px auto;
+  box-shadow: -7px 7px 1px 2px rgb(49 80 102), 7px -7px 1px 2px rgb(97, 49, 102);
+}
+
+#decrease:hover {
+  background-color: #315066;
+}
+
+#increase:hover {
+  background-color: #613166;
+}
+
+#decrease:hover,
+#increase:hover {
+  color: #dee7e9;
 }
 
 /* js */
