@@ -31,6 +31,7 @@ topicList.forEach((topicEl) => {
 console.groupEnd();
 
 // ? 5 - отримай перший елемент з списку всіх елементів з атрибутом data-topic і виведи його в консоль
+// const topicListFirstEl = document.querySelector("[data-topic]");
 const topicListFirstEl = topicList[0];
 console.group("5) topicListFirstEl");
 console.log(topicListFirstEl);
@@ -136,6 +137,9 @@ console.groupEnd();
 const newTextEl = document.createElement("p");
 newTextEl.textContent = "Об'єктна модель документа (Document Object Model)";
 // titleEl.insertAdjacentElement("afterend", newTextEl);
+// to avoid mixing approaches
+// better use after:
+// titleEl.after(newTextEl);
 console.group("17) newTextEl added");
 console.log("// uncomment the code");
 // console.log(titleEl);
@@ -144,6 +148,26 @@ console.log("// uncomment the code");
 console.groupEnd();
 
 // ? 18 - додай новий елемент списку у кінець списка, його заголовок це - "Властивість innerHTML" а опис (р) - "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу". тобто, потрібно створити елемент LI потім наповнити H3 та P і готову LI закинути у кінець списку
+const listItem = document.createElement("li");
+
+const heading = document.createElement("h3");
+heading.textContent = "Властивість innerHTML";
+
+const paragraph = document.createElement("p");
+paragraph.textContent =
+  "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу.";
+
+listItem.append(heading);
+listItem.append(paragraph);
+
+// listEl.append(listItem);
+console.group("18) listItem added via append");
+console.log("// uncomment the code");
+// console.log(listEl);
+// console.dir(listEl);
+console.groupEnd();
+
+// ? 19 - зроби це саме, але використовуй шаблонні рядки та метод insertAdjacentHTML()
 const newListItemElStr = `
         <li>
           <h3>Властивість innerHTML</h3>
@@ -153,14 +177,7 @@ const newListItemElStr = `
           </p>
         </li>
 `;
-// listEl.innerHTML += newListItemElStr;
-console.group("18) newListItemElStr added via innerHTML");
-console.log("// uncomment the code");
-// console.log(listEl);
-// console.dir(listEl);
-console.groupEnd();
 
-// ? 19 - зроби це саме, але використовуй шаблонні рядки та метод insertAdjacentHTML()
 // listEl.insertAdjacentHTML("beforeend", newListItemElStr);
 console.group("19) newListItemElStr added via insertAdjacentHTML");
 console.log("// uncomment the code");
